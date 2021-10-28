@@ -70,8 +70,8 @@ class AddPatientComponent extends Component {
             <div>
                 <div className="container">
                     <div className="row">
-                        <div className="card col-md-6 offset-md-3 offset-md-3">
-                            <h2 className="text-center">Add Patient</h2>
+                        <div className="card col-md-6 offset-md-3 offset-md-3 mt-3">
+                            <h2 className="text-center mt-3 display-5">Add Patient</h2>
                             <div className="card-body">
                                 <form>
                                     <div className="form-group">
@@ -103,8 +103,8 @@ class AddPatientComponent extends Component {
                                         <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" className="form-control" value={this.state.phone} onChange={this.changePhoneHandler} />
                                     </div>
 
-                                    <button className="btn btn-success" onClick={this.savePatient}>Save</button>
-                                    <button className="btn btn-danger" onClick={this.cancel.bind(this)} style={{ marginLeft: "10px" }}>Cancel</button>
+                                    <button className="btn btn-success mt-3" onClick={this.savePatient}>Save</button>
+                                    <button className="btn btn-danger mt-3" onClick={this.cancel.bind(this)} style={{ marginLeft: "10px" }}>Cancel</button>
                                 </form>
                             </div>
                         </div>

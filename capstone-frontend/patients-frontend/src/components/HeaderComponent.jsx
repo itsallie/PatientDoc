@@ -1,29 +1,34 @@
-import React, { Component } from "react";
+import React from "react";
+import { Link } from 'react-router-dom';
 import { ImClipboard } from "react-icons/im";
 
+function HeaderComponent() {
+    return (
+        <nav className="navbar navbar-expand-md">
 
-class HeaderComponent extends Component {
-    constructor(props) {
-        super(props)
+            <Link className="nav-link" to='/'>
+                <h1><ImClipboard />PatientDoc</h1>
+            </Link>
 
-        this.state = {
+            <div className="nav-menu">
+                <Link className="nav-link" to='/'>
+                    Home
+                </Link>
+            </div>
+            <div>
+                <Link className="nav-link" to='/patients'>
+                    Patients
+                </Link>
+            </div>
+            <div>
+                <Link className="nav-link" to='/add-patient'>
+                    New Patient
+                </Link>
+            </div>
 
-        }
-    }
 
-    render() {
-        return (
-            <div className="header-bg">
-                <header>
-                    <nav className="navbar navbar-expand-md ">
-                        <div className="head">
-                            <h1 className="mt-3"><ImClipboard />PatientDoc</h1>
-                        </div>
-                    </nav>
-                </header>
-            </div >
-        )
-    }
+        </nav>
+    )
 }
 
 export default HeaderComponent;

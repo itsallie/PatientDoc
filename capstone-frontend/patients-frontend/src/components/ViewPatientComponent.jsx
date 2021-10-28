@@ -19,55 +19,60 @@ class ViewPatientComponent extends Component {
         })
     }
 
+    back() {
+        this.props.history.push('/patients');
+    }
+
     render() {
         return (
-            <div className="view">
-                <div className=" col-md-6 offset-md-3 view-container">
+            <div className="card mt-3 ">
+                <div className=" card-body col-md-6 offset-md-3">
 
-                    <h3 className="text-center">View Patient Records</h3>
+                    <h3 className="text-center display-6">View {this.state.patient.firstName + " " + this.state.patient.lastName + "'s"} Records</h3>
                     <div className="card-body x-5">
                         <div className="row">
-                            <label>Date of Visit: </label>
+                            <label className="fw-bold">Date of Visit: </label>
                             <div>
                                 {this.state.patient.date}
                             </div>
                         </div>
                         <div className="row">
-                            <label>Patient First Name: </label>
+                            <label className="fw-bold">First Name: </label>
                             <div>
                                 {this.state.patient.firstName}
                             </div>
                         </div>
                         <div className="row">
-                            <label>Patient Last Name: </label>
+                            <label className="fw-bold">Last Name: </label>
                             <div>
                                 {this.state.patient.lastName}
                             </div>
                         </div>
                         <div className="row">
-                            <label>Patient Birthday: </label>
+                            <label className="fw-bold">Birthday: </label>
                             <div>
                                 {this.state.patient.birthDate}
                             </div>
                         </div>
                         <div className="row">
-                            <label>Patient Reason for Visit: </label>
+                            <label className="fw-bold">Reason for Visit: </label>
                             <div>
                                 {this.state.patient.reasonVisit}
                             </div>
                         </div>
                         <div className="row">
-                            <label>Patient Email: </label>
+                            <label className="fw-bold">Email: </label>
                             <div>
                                 {this.state.patient.email}
                             </div>
                         </div>
                         <div className="row">
-                            <label>Patient Phone Number: </label>
+                            <label className="fw-bold">Phone Number: </label>
                             <div>
                                 {this.state.patient.phone}
                             </div>
                         </div>
+                        <button className="btn btn-warning mt-3" onClick={this.back.bind(this)}>Go Back</button>
                     </div>
                 </div>
             </div>

@@ -44,7 +44,7 @@ class ListPatientsComponent extends Component {
     render() {
         return (
             <div>
-                <h2 className="text-center">Patients List</h2>
+                <h2 className="text-center display-4 fw-bold">Patients List</h2>
                 <div className="row">
                     <button className="btn btn-primary btn-sm" onClick={this.addPatient}>Add Patient</button>
                 </div>
@@ -57,12 +57,10 @@ class ListPatientsComponent extends Component {
                                 <th>Last Name</th>
                                 <th>Birthday</th>
                                 <th>Reason for Visit</th>
-                                {/* <th>Email</th>
-                                <th>Phone Number</th> */}
                                 <th>Actions</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="table-light">
                             {
                                 this.state.patients.map(
                                     patient =>
@@ -72,8 +70,6 @@ class ListPatientsComponent extends Component {
                                             <td> {patient.lastName}</td>
                                             <td> {patient.birthDate}</td>
                                             <td> {patient.reasonVisit}</td>
-                                            {/* <td> {patient.email}</td>
-                                            <td> {patient.phone}</td> */}
                                             <td>
                                                 <button onClick={() => this.viewPatient(patient.id)} className="btn btn-primary">View</button>
                                                 <button style={{ marginLeft: "10px" }} onClick={() => this.editPatient(patient.id)} className="btn btn-info">Update</button>

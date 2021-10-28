@@ -7,6 +7,7 @@ import HeaderComponent from './components/HeaderComponent';
 import ListPatientsComponent from './components/ListPatientsComponent';
 import UpdatePatientComponent from './components/UpdatePatientComponent';
 import ViewPatientComponent from './components/ViewPatientComponent';
+import Home from './pages/Home';
 
 
 
@@ -18,15 +19,15 @@ function App() {
         <HeaderComponent />
         <div className="container content-wrap">
           <Switch>
-            <Route path="/" exact component={ListPatientsComponent}></Route>
+            <Route path="/" exact component={Home}></Route>
             <Route path="/patients" component={ListPatientsComponent}></Route>
             <Route path="/add-patient" component={AddPatientComponent}></Route>
             <Route path="/update-patient/:id" component={UpdatePatientComponent}></Route>
             <Route path="/view-patient/:id" component={ViewPatientComponent}></Route>
           </Switch>
         </div>
-        <FooterComponent />
       </Router>
+      <FooterComponent />
     </div>
   );
 }
